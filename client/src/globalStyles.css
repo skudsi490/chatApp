@@ -1,0 +1,97 @@
+/* Global style settings */
+:root {
+    /* Color scheme */
+    --primary-color: #075E54;  
+    --secondary-color: #128C7E;  
+    --background-color: #ECE5DD; 
+    --text-color: #444;  
+    --input-background-color: #fff;
+    --input-text-color: #595959;
+    --button-hover-color: #34B7F1; 
+    --overlay-background-color: rgba(0, 0, 0, 0.85); 
+    --overlay-padding: 2rem; 
+    --input-focus-shadow: 0 0 0 2px var(--secondary-color); 
+    /* Font sizes */
+    --font-size-small: 0.8rem;
+    --font-size-normal: 1rem;
+    --font-size-large: 1.2rem;
+
+    /* Spacing */
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+    --border-radius-small: 4px;
+    --border-radius-large: 8px;
+
+    /* Shadows */
+    --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.15);
+    --shadow-heavy: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    font-size: var(--font-size-normal);
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+input, button {
+    font-family: inherit;
+    font-size: var(--font-size-normal);
+    font-weight: 300;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: var(--border-radius-small);
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: var(--shadow-light);
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    box-shadow: var(--shadow-heavy);
+}
+
+input[type="text"], input[type="password"] {
+    background-color: var(--input-background-color);
+    color: var(--input-text-color);
+    border: 1px solid #ccc;
+    padding: var(--spacing-small);
+    border-radius: var(--border-radius-small);
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: var(--secondary-color);
+    box-shadow: var(--shadow-medium);
+}
+
+@media (max-width: 600px) {
+    :root {
+        --font-size-small: 0.7rem;
+        --font-size-normal: 0.9rem;
+        --font-size-large: 1rem;
+
+        --spacing-small: 6px;
+        --spacing-medium: 12px;
+        --spacing-large: 18px;
+    }
+
+    body {
+        padding: 0 5px;
+    }
+
+    button, input[type="text"], input[type="password"] {
+        padding: var(--spacing-small) var(--spacing-medium);
+    }
+}

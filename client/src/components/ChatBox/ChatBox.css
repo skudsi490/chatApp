@@ -1,0 +1,20 @@
+/* ChatBox Styles */
+.chat-box-container {
+    flex-grow: 1;
+    display: flex;
+    padding: var(--spacing-small);
+    background-color: var(--input-background-color);
+    border-radius: var(--spacing-small);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); 
+    transition: box-shadow 0.3s ease-in-out; 
+}
+
+.chat-box-container:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
+}
+
+@media (min-width: 768px) {
+    .chat-box-container {
+        flex-direction: row; 
+    }
+}

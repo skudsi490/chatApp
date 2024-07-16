@@ -1,0 +1,38 @@
+/* BadgeItem Styles */
+.badge-item {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--spacing-small);
+    margin: var(--spacing-small);
+    margin-bottom: var(--spacing-medium);
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: var(--font-size-small);
+    border-radius: var(--border-radius-large);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .badge-item:hover {
+    background-color: var(--primary-color);
+  }
+  
+  .badge-close-icon {
+    margin-left: var(--spacing-small);
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 600px) {
+    .badge-item {
+      padding: var(--spacing-small);
+      margin: var(--spacing-small);
+    }
+  
+    .badge-close-icon {
+      width: 10px;
+      height: 10px;
+    }
+  }
+  

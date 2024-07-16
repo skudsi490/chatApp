@@ -1,0 +1,34 @@
+/* Chat.css */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--background-color);
+  width: 100%; 
+}
+
+.chat-header {
+  padding: 0; 
+  background-color: transparent;
+}
+
+.chat-main {
+  flex-grow: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .chat-container {
+    flex-direction: column;
+  }
+
+  .chat-header {
+    height: auto; 
+    background-color: transparent; 
+  }
+
+  .chat-main {
+    flex-direction: column; 
+  }
+}
