@@ -1,23 +1,29 @@
-
-
 .register-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: var(--spacing-large);
-  background-color: var(--background-color);
-  box-shadow: var(--shadow-heavy);
-  border-radius: var(--border-radius-large);
   max-width: 400px;
   margin: auto;
-  margin-top: var(--spacing-large);
+  margin-top: 5%;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   font-family: 'Montserrat', sans-serif;
+}
+
+.logo {
+  width: 180px; 
+  height: 100px; 
+  margin-bottom: var(--spacing-medium); 
+  cursor: pointer; 
 }
 
 .form-control {
   margin-bottom: var(--spacing-medium);
   width: 100%;
+  padding: 0 var(--spacing-small); 
 }
 
 .input-group {
@@ -25,14 +31,15 @@
   align-items: center;
 }
 
-input[type="text"], input[type="email"], input[type="password"], input[type="file"] {
+input[type="text"], input[type="email"], input[type="password"] {
   width: 100%;
-  padding: var(--spacing-small);
+  padding: var(--spacing-medium); 
   margin: var(--spacing-small) 0;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: var(--input-background-color);
   color: var(--input-text-color);
+  box-sizing: border-box; 
 }
 
 button {
@@ -57,6 +64,20 @@ button:disabled {
 
 .register-button {
   margin-top: var(--spacing-medium);
+}
+
+.login-link {
+  margin-top: var(--spacing-small);
+  font-size: var(--font-size-small);
+}
+
+.login-link a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 600px) {

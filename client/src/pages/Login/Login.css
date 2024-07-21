@@ -12,9 +12,22 @@
   font-family: 'Montserrat', sans-serif; 
 }
 
+.logo {
+  width: 180px; 
+  height: 100px; 
+  margin-bottom: var(--spacing-medium); 
+  cursor: pointer; 
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 .form-control {
   margin-bottom: var(--spacing-medium);
   width: 100%;
+  padding: 0 var(--spacing-small); 
 }
 
 .input-group {
@@ -24,12 +37,13 @@
 
 input[type="email"], input[type="password"] {
   width: 100%;
-  padding: var(--spacing-small);
+  padding: var(--spacing-medium); 
   margin: var(--spacing-small) 0;
   border: 1px solid #ccc;
   border-radius: 4px;
   background: var(--input-background-color);
   color: var(--input-text-color);
+  box-sizing: border-box; 
 }
 
 button {
@@ -62,4 +76,18 @@ button:disabled {
 
 .guest-button {
   background-color: #757575; 
+}
+
+.register-link {
+  margin-top: var(--spacing-small);
+  font-size: var(--font-size-small);
+}
+
+.register-link a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
 }

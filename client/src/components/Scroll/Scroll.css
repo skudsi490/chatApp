@@ -7,17 +7,55 @@
 
 .message {
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start; 
+  align-items: flex-start;
   margin-top: var(--spacing-small);
+  word-wrap: break-word; 
 }
 
-.same-user {
-  margin-top: var(--spacing-small);
+.my-message {
+  flex-direction: row-reverse;
+}
+
+.other-message {
+  flex-direction: row;
+}
+
+.message-body {
+  padding: var(--spacing-small) var(--spacing-medium);
+  border-radius: 20px;
+  margin-bottom: var(--spacing-small);
+  word-break: break-word; 
+  display: flex;
+  flex-direction: column;
+  max-width: 75%;
+}
+
+.message-text {
+  margin-bottom: var(--spacing-small);
+}
+
+.current-user {
+  background-color: #F3E2D9; 
+  align-self: flex-end;
+  margin-left: var(--spacing-small);
+}
+
+.other-user {
+  background-color: #DCF8C6; 
+  align-self: flex-start;
+  margin-right: var(--spacing-small);
 }
 
 .avatar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
   margin-right: var(--spacing-small);
+}
+
+.avatar-container.right {
+  margin-left: var(--spacing-small);
 }
 
 .avatar {
@@ -25,30 +63,25 @@
   height: 30px;
   border-radius: 50%;
   object-fit: cover;
-  cursor: pointer;
 }
 
-.my-message, .other-message {
-  max-width: 75%;
-  padding: var(--spacing-small) var(--spacing-medium);
-  border-radius: 20px;
-  margin-bottom: var(--spacing-small);
-}
-
-.my-message {
-  background-color: var(--my-message-bg, #DCF8C6); 
-  margin-left: auto;
-  align-self: flex-end;
-}
-
-.other-message {
-  background-color: var(--other-message-bg, #ECE5DD); 
-  align-self: flex-start;
+.sender-info {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-start; 
+  text-align: center;
 }
 
+.sender-name {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.message-timestamp {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 5px;
+}
 
 @media (max-width: 600px) {
   .avatar {
@@ -56,7 +89,7 @@
       height: 25px;
   }
 
-  .my-message, .other-message {
+  .message-body {
       padding: var(--spacing-small);
   }
 }

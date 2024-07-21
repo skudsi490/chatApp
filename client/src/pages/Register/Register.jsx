@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { registerUser } from '../../features/chat/chatSlice';
 import './Register.css';
+import Logo from '../../assets/logo.svg'; // Import the logo
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -42,6 +43,7 @@ const Register = () => {
 
   return (
     <div className="register-container">
+      <img src={Logo} alt="Logo" className="logo" onClick={() => navigate('/')} /> 
       <h1>Register</h1>
       <div className="form-control">
         <label htmlFor="name">Name</label>
@@ -86,6 +88,9 @@ const Register = () => {
       <button className="register-button" onClick={handleSubmit} disabled={loading}>
         {loading ? 'Registering...' : 'Register'}
       </button>
+      <div className="login-link">
+        <p>Already have an account? <Link to="/login">Login now</Link></p> 
+      </div>
     </div>
   );
 };

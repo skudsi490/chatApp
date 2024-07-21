@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { loginUser } from '../../features/chat/chatSlice';
 import './Login.css';
+import Logo from '../../assets/logo.svg'; // Import the logo
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -19,7 +20,6 @@ const Login = () => {
       return;
     }
 
-  
     dispatch(loginUser({ emailAddress: email, password }))
       .unwrap()
       .then(() => {
@@ -37,6 +37,7 @@ const Login = () => {
 
   return (
     <div className="login-container">
+      <img src={Logo} alt="Logo" className="logo" onClick={() => navigate('/')} /> 
       <h1>Login</h1>
       <div className="form-control">
         <label htmlFor="email">Email Address</label>
@@ -61,6 +62,9 @@ const Login = () => {
       <button className="login-button" onClick={handleLogin} disabled={loading}>
         {loading ? 'Loading...' : 'Login'}
       </button>
+      <div className="register-link">
+        <p>Dont have an account? <Link to="/register">Register now</Link></p> 
+      </div>
     </div>
   );
 };
