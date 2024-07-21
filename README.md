@@ -79,7 +79,6 @@ ChatApp is the capstone project for my Full Stack Web Development Certificate. I
 1. **Clone the repository:**
     
     ```bash
-    bashCopy code
     git clone https://github.com/yourusername/chatapp.git
     cd chatapp
     
@@ -89,7 +88,6 @@ ChatApp is the capstone project for my Full Stack Web Development Certificate. I
     - Backend:
         
         ```bash
-        bashCopy code
         cd server
         npm install
         
@@ -98,7 +96,6 @@ ChatApp is the capstone project for my Full Stack Web Development Certificate. I
     - Frontend:
         
         ```bash
-        bashCopy code
         cd client
         npm install
         
@@ -108,7 +105,6 @@ ChatApp is the capstone project for my Full Stack Web Development Certificate. I
     - Create a `.env` file in the `server` directory and add the following:
         
         ```makefile
-        makefileCopy code
         # Server Configuration
         PORT=5000
         
@@ -126,7 +122,6 @@ ChatApp is the capstone project for my Full Stack Web Development Certificate. I
     - Backend:
         
         ```bash
-        bashCopy code
         cd server
         npm start
         
@@ -135,7 +130,6 @@ ChatApp is the capstone project for my Full Stack Web Development Certificate. I
     - Frontend:
         
         ```bash
-        bashCopy code
         cd client
         npm run dev
         
