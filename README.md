@@ -157,13 +157,6 @@ To ensure that the application can handle high traffic efficiently, a combinatio
 - **Global Styles:** The application uses CSS variables for consistent theming and easy customization.
 - **Responsive Layout:** Media queries ensure a responsive layout that adapts to different screen sizes, ensuring usability on both desktop and mobile devices.
 
-## Future Enhancements
-
-- **User Presence:** Add indicators to show online/offline status of users.
-- **Push Notifications:** Implement push notifications for new messages.
-- **Security Improvements:** Enhance data security and communication protocols.
-- **Performance Optimization:** Further optimize the performance for even larger-scale use.
-
 ## Conclusion
 
 ChatApp is a comprehensive project that demonstrates my proficiency in full stack development using the MERN stack. It combines modern web development techniques with practical implementations of real-time communication, responsive design, and efficient data handling. This project serves as a testament to my skills and readiness for professional full stack development roles.
